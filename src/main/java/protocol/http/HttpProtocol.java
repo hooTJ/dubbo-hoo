@@ -4,6 +4,9 @@ import framework.Invocation;
 import framework.Protocol;
 import framework.URL;
 
+/**
+ * http 协议
+ */
 public class HttpProtocol implements Protocol {
     @Override
     public void start(URL url) {

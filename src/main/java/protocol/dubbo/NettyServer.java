@@ -9,6 +9,9 @@ import io.netty.handler.logging.LoggingHandler;
 
 import java.net.InetSocketAddress;
 
+/**
+ * netty 服务端
+ */
 public class NettyServer {
 
     public void start(String hostname, Integer port){

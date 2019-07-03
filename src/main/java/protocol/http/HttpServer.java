@@ -8,7 +8,7 @@ import org.apache.catalina.core.StandardHost;
 import org.apache.catalina.startup.Tomcat;
 
 /**
- * Http 借助内嵌tomcat 启动
+ * http 借助内嵌tomcat 启动
  */
 public class HttpServer {
 

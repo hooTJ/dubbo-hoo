@@ -8,6 +8,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+/**
+ * netty 客户端
+ */
 public class NettyClient {
 
     public String send(String hostname, Integer port, Invocation invocation) {

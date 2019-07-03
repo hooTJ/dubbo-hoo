@@ -14,6 +14,9 @@ import java.io.ObjectInputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * http 请求处理器
+ */
 public class HttpServerHandler {
 
     public void handler(HttpServletRequest req, HttpServletResponse resp){

@@ -11,6 +11,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * http 客户端
+ */
 public class HttpClient {
 
     public String send(String hostname, Integer port, Invocation invocation) {

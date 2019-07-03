@@ -10,6 +10,9 @@ import register.LocalRegister;
 
 import java.lang.reflect.Method;
 
+/**
+ * netty 处理器
+ */
 public class NettyServerHandler extends ChannelInitializer<SocketChannel> {
 
     @Override
@@ -25,6 +28,7 @@ public class NettyServerHandler extends ChannelInitializer<SocketChannel> {
                 Method method = implClass.getMethod(invocation.getMethodName(), invocation.getParamsType());
                 Object invoke = method.invoke(implClass.newInstance(), invocation.getParams());
                 System.out.println("netty 执行的结果为： "+ invoke.toString());
+                // 注意，这个必须加上：addListener(ChannelFutureListener.CLOSE);
                 ctx.writeAndFlush(invoke.toString()).addListener(ChannelFutureListener.CLOSE);
             }
         });

@@ -6,6 +6,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * http 统一请求入口
+ */
 public class DispatcherServlet extends HttpServlet{
 
     @Override
@@ -13,4 +16,5 @@ public class DispatcherServlet extends HttpServlet{
         HttpServerHandler handler = new HttpServerHandler();
         handler.handler(req, resp);
     }
+
 }

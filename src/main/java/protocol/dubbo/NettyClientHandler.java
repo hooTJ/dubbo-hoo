@@ -1,6 +1,5 @@
 package protocol.dubbo;
 
-import framework.Invocation;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.ChannelInitializer;
@@ -10,7 +9,9 @@ import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
 
-
+/**
+ * netty 客户端处理器
+ */
 public class NettyClientHandler extends ChannelInitializer<SocketChannel> {
     private Object result;
 

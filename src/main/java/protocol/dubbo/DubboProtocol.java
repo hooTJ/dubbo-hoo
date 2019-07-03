@@ -4,6 +4,9 @@ import framework.Invocation;
 import framework.Protocol;
 import framework.URL;
 
+/**
+ * netty 协议
+ */
 public class DubboProtocol implements Protocol{
     @Override
     public void start(URL url) {

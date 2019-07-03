@@ -16,6 +16,12 @@ public class RemoteRegister {
 
     private static ConcurrentMap<String, List<URL>> map = new ConcurrentHashMap<>();
 
+    /**
+     *注册
+     *
+     * @param interfaceName
+     * @param url
+     */
     public static void register(String interfaceName, URL url) {
         List<URL> urls;
         if (map.containsKey(interfaceName)) {
@@ -29,6 +35,9 @@ public class RemoteRegister {
         saveFile();
     }
 
+    /**
+     * 把对象保存为本地文件
+     */
     private static void saveFile() {
         System.out.println("存放文件：" + map);
         try (FileOutputStream fos = new FileOutputStream("/tmp.txt");
@@ -40,6 +49,9 @@ public class RemoteRegister {
         }
     }
 
+    /**
+     * 读取本地文件
+     */
     private static void getFile() {
         try (FileInputStream fis = new FileInputStream("/tmp.txt");
              ObjectInputStream ois = new ObjectInputStream(fis)) {
@@ -52,6 +64,12 @@ public class RemoteRegister {
         }
     }
 
+    /**
+     * 随机读取一个地址
+     *
+     * @param interfaceName
+     * @return
+     */
     public static URL random(String interfaceName) {
         List<URL> urls = map.get(interfaceName);
         if (urls == null || urls.size() < 1) {

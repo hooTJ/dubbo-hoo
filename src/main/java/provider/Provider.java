@@ -9,6 +9,9 @@ import provider.api.impl.HelloServiceImpl;
 import register.LocalRegister;
 import register.RemoteRegister;
 
+/**
+ * 服务提供者启动类
+ */
 public class Provider {
 
     public static void main(String[] args) {
