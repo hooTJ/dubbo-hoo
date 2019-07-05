@@ -1,11 +1,10 @@
 package framework;
 
-import protocol.http.HttpClient;
-import register.RemoteRegister;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+
+import register.RemoteRegister;
 
 /**
  * 代理工厂
